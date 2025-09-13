@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Poll App</title>
+    <link rel="stylesheet" href="/src/app.css" />
+  </head>
+  <body>
+    <div class="poll-container">
+
+    <!-- create new pol, including options -->
+      <input type="text" id="pollQuestion" placeholder="Poll question" />
+      <br /><br />
+
+      <div id="options-container"></div>
+
+      <br />
+      <button id="addOptionsBtn">Add option</button>
+      <button id="createPollBtn">Create poll</button>
+      </div>
+
+    <!-- vote on existing polls -->
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
