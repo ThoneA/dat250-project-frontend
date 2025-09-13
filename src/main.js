@@ -1,5 +1,7 @@
+
 const optionsContainer = document.getElementById('options-container');  
 const addOptionBtn = document.getElementById('addOptionBtn');
+const createPollBtn = document.getElementById('createPollBtn');
 
 // når man trykker "add option"
 addOptionBtn.addEventListener('click', () => {
@@ -17,5 +19,20 @@ addOptionBtn.addEventListener('click', () => {
     });
 
     optionsContainer.appendChild(optionDiv);
+});
+
+createPollBtn.addEventListener('click', () => {
+    const question = document.getElementById('pollQuestion');
+
+    /** @type {NodeListOf<HTMLInputElement>} */
+    const optionInputs = document.querySelectorAll('.option-input') ;
+
+    const options = [];
+    optionInputs.forEach(input => {
+        if (input.value.trim() !== '') {
+            options.push(input.value.trim());
+        }
+    });
+    
 });
 
